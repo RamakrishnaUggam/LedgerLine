@@ -1,3 +1,4 @@
+
 package com.ledgerline.user.repository;
 
 import com.ledgerline.user.entity.User;
@@ -8,7 +9,7 @@ import java.util.UUID;
 
 public interface UserRepository extends JpaRepository<User, UUID> {
 
-    Optional<User> findByEmail(String email);
+    Optional<User> findByEmailIgnoreCase(String email);
 
-    boolean existsByEmail(String email);
+    boolean existsByEmailIgnoreCase(String email);
 }
