@@ -1,6 +1,6 @@
-# BalanceVault
+# LedgerLine / BalanceVault
 
-BalanceVault is a fintech account-management prototype with a responsive React frontend and an Express/MongoDB API in the same repository.
+LedgerLine is the repository project name. BalanceVault is the current full-stack fintech application in the root workspace.
 
 ## Current implementation
 
@@ -13,9 +13,10 @@ BalanceVault is a fintech account-management prototype with a responsive React f
 - Deposits, withdrawals, and two-sided transfers
 - Transaction history and audit records
 - Health and database readiness endpoints
-- Helmet, CORS, request validation, rate limiting, password hashing, and optional Redis storage
+- Helmet, CORS, Zod validation, rate limiting, password hashing, and optional Redis storage
+- Existing LedgerLine Spring Boot history preserved under `backend/ledgerline`
 
-## Local setup
+## Root application setup
 
 1. Install dependencies:
 
@@ -45,7 +46,7 @@ To create local admin and auditor accounts, set the `SEED_*` variables in `.env`
 npm run seed
 ```
 
-## API endpoints
+## Root API endpoints
 
 - `GET /api/health`
 - `GET /api/ready`
