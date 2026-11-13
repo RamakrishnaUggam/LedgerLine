@@ -73,3 +73,7 @@ npm run lint
 ```
 
 Full database-backed integration tests require a reachable MongoDB instance configured through `MONGODB_URI`. Never commit `.env` files or secret values.
+
+## Vercel deployment
+
+Import the repository into Vercel with the repository root as the project root. Add `MONGODB_URI`, `JWT_SECRET`, `CLIENT_ORIGIN`, and optionally `REDIS_URL` as Vercel environment variables. The included `vercel.json` serves the Vite frontend and exposes the Express API through `/api`.
